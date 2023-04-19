@@ -17,7 +17,7 @@ typedef struct node
 }
 node;
 
-const unsigned int N = 26;
+const unsigned int N = 214000;
 
 unsigned int total_words = 0;
 
@@ -52,7 +52,7 @@ unsigned int hash(const char *word)
         hash *= FNV_PRIME_32;
     }
 
-    return hash;
+    return hash % N;
 }
 
 
