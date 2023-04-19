@@ -2,6 +2,8 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+#include <strings.h>
 
 #define FNV_OFFSET_BASIS_32 2166136261
 #define FNV_PRIME_32 16777619
