@@ -25,6 +25,15 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    int hash_index = hash(word);
+
+    for (node *cursor = table[hash_index]; cursor != NULL; cursor = cursor->next)
+    {
+        if (strcasecmp(cursor->word, word) == 0)
+        {
+            return true;
+        }
+    }
     return false;
 }
 
